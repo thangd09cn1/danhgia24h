@@ -11,28 +11,42 @@ import javax.persistence.Table;
 public class Product extends IdEntity {
 
     @Column(nullable = false, unique = true)
+    private String code;
+
     private String name;
 
     private String description;
-    private Integer sale;
-    private Integer news;
-    private Integer hot;
+    private String descriptionSort;
+    private Integer setSale;
+    private Integer setNew;
+    private Integer setHot;
 
-    private Long cost;
+    private double cost;
+    private double costSale;
     private Long costUomId;
-    private Long quantity;
-    private Long quantityUomId;
-    private Long companyId;
+    private double quantity;
+    private Long uomId;
+    private Long manufacturerId;
+    private Long supplierId;
+    private Integer availability;
 
-    private String image;
-    private String status;
-
+    private Integer rate;
     private Integer ratePrice;
     private Integer rateQuality;
+    private Integer rateValue;
 
-    private String descriptionSort;
     private String color;
     private String size;
+    private String avartar;
+    private String images;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getName() {
         return name;
@@ -50,36 +64,52 @@ public class Product extends IdEntity {
         this.description = description;
     }
 
-    public Integer getSale() {
-        return sale;
+    public String getDescriptionSort() {
+        return descriptionSort;
     }
 
-    public void setSale(Integer sale) {
-        this.sale = sale;
+    public void setDescriptionSort(String descriptionSort) {
+        this.descriptionSort = descriptionSort;
     }
 
-    public Integer getNews() {
-        return news;
+    public Integer getSetSale() {
+        return setSale;
     }
 
-    public void setNews(Integer news) {
-        this.news = news;
+    public void setSetSale(Integer setSale) {
+        this.setSale = setSale;
     }
 
-    public Integer getHot() {
-        return hot;
+    public Integer getSetNew() {
+        return setNew;
     }
 
-    public void setHot(Integer hot) {
-        this.hot = hot;
+    public void setSetNew(Integer setNew) {
+        this.setNew = setNew;
     }
 
-    public Long getCost() {
+    public Integer getSetHot() {
+        return setHot;
+    }
+
+    public void setSetHot(Integer setHot) {
+        this.setHot = setHot;
+    }
+
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(Long cost) {
+    public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public double getCostSale() {
+        return costSale;
+    }
+
+    public void setCostSale(double costSale) {
+        this.costSale = costSale;
     }
 
     public Long getCostUomId() {
@@ -90,44 +120,52 @@ public class Product extends IdEntity {
         this.costUomId = costUomId;
     }
 
-    public Long getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Long quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 
-    public Long getQuantityUomId() {
-        return quantityUomId;
+    public Long getUomId() {
+        return uomId;
     }
 
-    public void setQuantityUomId(Long quantityUomId) {
-        this.quantityUomId = quantityUomId;
+    public void setUomId(Long uomId) {
+        this.uomId = uomId;
     }
 
-    public Long getCompanyId() {
-        return companyId;
+    public Long getManufacturerId() {
+        return manufacturerId;
     }
 
-    public void setCompanyId(Long companyId) {
-        this.companyId = companyId;
+    public void setManufacturerId(Long manufacturerId) {
+        this.manufacturerId = manufacturerId;
     }
 
-    public String getImage() {
-        return image;
+    public Long getSupplierId() {
+        return supplierId;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
     }
 
-    public String getStatus() {
-        return status;
+    public Integer getAvailability() {
+        return availability;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setAvailability(Integer availability) {
+        this.availability = availability;
+    }
+
+    public Integer getRate() {
+        return rate;
+    }
+
+    public void setRate(Integer rate) {
+        this.rate = rate;
     }
 
     public Integer getRatePrice() {
@@ -146,12 +184,12 @@ public class Product extends IdEntity {
         this.rateQuality = rateQuality;
     }
 
-    public String getDescriptionSort() {
-        return descriptionSort;
+    public Integer getRateValue() {
+        return rateValue;
     }
 
-    public void setDescriptionSort(String descriptionSort) {
-        this.descriptionSort = descriptionSort;
+    public void setRateValue(Integer rateValue) {
+        this.rateValue = rateValue;
     }
 
     public String getColor() {
@@ -168,5 +206,21 @@ public class Product extends IdEntity {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    public String getAvartar() {
+        return avartar;
+    }
+
+    public void setAvartar(String avartar) {
+        this.avartar = avartar;
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
     }
 }
